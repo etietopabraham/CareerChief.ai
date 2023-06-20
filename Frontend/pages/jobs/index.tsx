@@ -3,12 +3,10 @@ import Layout from "@/components/Layout";
 import { JobStyles } from "@/styles/jobs.styles";
 import Nav from "@/components/navbar";
 import Card from "@/components/common/card";
-import {
-  JOBS,
-  COLUMNS,
-} from "@/components/jobs/constants";
+import { JOBS, COLUMNS } from "@/components/jobs/constants";
 import FilterSortCard from "@/components/common/filter-card";
 import Table from "@/components/common/table";
+import SideSlider from "@/components/slider";
 
 const JobsPage: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
@@ -21,6 +19,7 @@ const JobsPage: React.FC = () => {
   const [filter, setFilter] = useState<string>("");
   const [applicants, setApplicants] = useState<any>([]);
   const [loadingTable, setLoadingTable] = useState<boolean>(false);
+  const [sidebar, setSidebar] = useState(false);
 
   const handleSearch = (term: string) => {
     setSearchTerm(term);
@@ -28,7 +27,6 @@ const JobsPage: React.FC = () => {
 
   // Filter the jobs based on the search term or filter item
   const searchFilter = JOBS.filter((job) => {
-
     const searchFields = [
       job.jobType.join(", "),
       job.location,
@@ -75,9 +73,10 @@ const JobsPage: React.FC = () => {
   const handleCardClick = (item: any, cardIndex: any) => {
     setActiveCardIndex(cardIndex === activeCardIndex ? null : cardIndex);
     setLoadingTable(true);
+    setSidebar(true);
     setTimeout(() => {
-      setApplicants(item?.details?.applicants)
-      setLoadingTable(false)
+      setApplicants(item?.details?.applicants);
+      setLoadingTable(false);
     }, 2000);
   };
 
@@ -125,6 +124,20 @@ const JobsPage: React.FC = () => {
     <div>
       <Layout>
         <JobStyles>
+          <SideSlider
+            sidebar={sidebar}
+            setSidebar={setSidebar}
+            applicants={applicants}
+            loading={loadingTable}
+          >
+            {/* <div className="table">
+              <Table
+                columns={COLUMNS}
+                data={applicants}
+                loading={loadingTable}
+              />
+            </div> */}
+          </SideSlider>
           <Nav handleSearch={handleSearch} />
           <div className="body">
             <div style={{ overflow: "auto" }}>
@@ -163,7 +176,11 @@ const JobsPage: React.FC = () => {
               </div>
             </div>
             <div className="table">
-              <Table columns={COLUMNS} data={applicants} loading={loadingTable} />
+              <Table
+                columns={COLUMNS}
+                data={applicants}
+                loading={loadingTable}
+              />
             </div>
           </div>
         </JobStyles>
