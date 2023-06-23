@@ -1,7 +1,7 @@
 import { NotificationIcon } from "@/public/svgs";
 import Image from "next/image";
 import React, { useState } from "react";
-import Search from "../common/Search";
+import Search from "../../common/Search";
 import { NavStyles } from "./styles";
 
 const Nav = ({handleSearch}:any) => {

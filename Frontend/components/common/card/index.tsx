@@ -1,6 +1,6 @@
 import React from "react";
 import { CardStyles } from "./styles";
-import { truncateText } from "@/utils";
+import { truncateText } from "@/utils/libs";
 import Image from "next/image";
 import PlusIcon from "@/public/svgs/PlusIcon";
 

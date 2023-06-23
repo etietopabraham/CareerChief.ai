@@ -22,3 +22,4 @@ export * from './NotificationIcon';
 export * from './ArrowDown';
 export * from './CalendarIcon';
 export * from './AtoZIcon';
+export * from './RoundArrow';

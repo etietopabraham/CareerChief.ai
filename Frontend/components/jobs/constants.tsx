@@ -3,7 +3,7 @@ import ShareIcon from "@/public/svgs/ShareIcon";
 import SmallMessageIcon from "@/public/svgs/SmallMessageIcon";
 import TimesIcon from "@/public/svgs/TimesIcon";
 import { TableItem } from "@/styles/jobs.styles";
-import { truncateText } from "@/utils";
+import { truncateText } from "@/utils/libs";
 
 export const SORT_ITEMS = [
   "Date of Post",

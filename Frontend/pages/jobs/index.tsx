@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Layout from "@/components/Layout";
 import { JobStyles } from "@/styles/jobs.styles";
-import Nav from "@/components/navbar";
+import Nav from "@/components/jobs/navbar";
 import Card from "@/components/common/card";
 import { JOBS, COLUMNS } from "@/components/jobs/constants";
 import FilterSortCard from "@/components/common/filter-card";
