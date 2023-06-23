@@ -1,0 +1,130 @@
+import {
+  DashboardIcon,
+  JobsIcon,
+  CandidatesIcon,
+  AssessesIcon,
+  InterviewsIcon,
+  OffersIcon,
+  MessageIcon,
+  CompetencyIcon,
+  ReferralsIcon,
+  EmployeesIcon,
+  PayrollIcon,
+  TaxesIcon,
+  ReportsIcon,
+  MarketIcon,
+  SettingsIcon,
+} from "@/public/svgs";
+
+export const SideBarMenus = () => {
+  const sideBarData = [
+    {
+      id: 1,
+      title: "Dashboard",
+      ActiveIcon: DashboardIcon,
+      path: `/dashboard`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 2,
+      title: "Jobs",
+      ActiveIcon: JobsIcon,
+      path: `/jobs`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 3,
+      title: "Candidates",
+      ActiveIcon: CandidatesIcon,
+      path: `/candidates`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 4,
+      title: "Assessed",
+      ActiveIcon: AssessesIcon,
+      path: `/assessed`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 5,
+      title: "Interviews",
+      ActiveIcon: InterviewsIcon,
+      path: `/interviews`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 6,
+      title: "Offers",
+      ActiveIcon: OffersIcon,
+      path: `/offers`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 7,
+      title: "Messages",
+      ActiveIcon: MessageIcon,
+      path: `/messages`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 8,
+      title: "Competency TM",
+      ActiveIcon: CompetencyIcon,
+      path: `/competence`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 9,
+      title: "My Referrals",
+      ActiveIcon: ReferralsIcon,
+      path: `/referrals`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 10,
+      title: "Employees",
+      ActiveIcon: EmployeesIcon,
+      path: `/employees`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 11,
+      title: "Payroll",
+      ActiveIcon: PayrollIcon,
+      path: `/payroll`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 12,
+      title: "Taxes",
+      ActiveIcon: TaxesIcon,
+      path: `/taxes`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 13,
+      title: "Reports",
+      ActiveIcon: ReportsIcon,
+      path: `/reports`,
+      activeIconColor: "#7AB972",
+    },
+    {
+      id: 14,
+      title: "Market Insights",
+      ActiveIcon: MarketIcon,
+      path: `/market-insights`,
+      activeIconColor: "#7AB972",
+    },
+
+    {
+      id: 15,
+      title: "Settings",
+      ActiveIcon: SettingsIcon,
+      path: `/settings`,
+      activeIconColor: "#7AB972",
+    },
+  ].filter(Boolean);
+
+  return { sideBarData };
+};

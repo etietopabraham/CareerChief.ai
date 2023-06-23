@@ -1,0 +1,48 @@
+@font-face {
+  font-family: "Menlo";
+  src: url("/fonts/Menlo-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-Regular.ttf') format('truetype');
+  /* Adjust the URL based on the actual font file name and extension */
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-Light.ttf') format('truetype');
+  /* Adjust the URL based on the actual font file name and extension */
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-Medium.ttf') format('truetype');
+  /* Adjust the URL based on the actual font file name and extension */
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-SemiBold.ttf') format('truetype');
+  /* Adjust the URL based on the actual font file name and extension */
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Quicksand';
+  src: url('/fonts/Quicksand-Bold.ttf') format('truetype');
+  /* Adjust the URL based on the actual font file name and extension */
+  font-weight: bold;
+  font-style: normal;
+}
+
+body {
+  font-family: "Menlo", "Quicksand", sans-serif;
+}
